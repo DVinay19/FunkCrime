@@ -1,0 +1,66 @@
+[
+  {
+    "id": "EVT-001",
+    "timestamp": "2026-10-14T09:00:00Z",
+    "event_type": "login_success",
+    "username": "alex",
+    "source_ip": "198.51.100.24",
+    "hostname": "workstation-01",
+    "details": "Successful authentication"
+  },
+  {
+    "id": "EVT-002",
+    "timestamp": "2026-10-14T09:02:00Z",
+    "event_type": "login_failed",
+    "username": "admin",
+    "source_ip": "198.51.100.24",
+    "hostname": "workstation-01",
+    "details": "Invalid password"
+  },
+  {
+    "id": "EVT-003",
+    "timestamp": "2026-10-14T09:02:15Z",
+    "event_type": "login_failed",
+    "username": "admin",
+    "source_ip": "198.51.100.24",
+    "hostname": "workstation-01",
+    "details": "Invalid password"
+  },
+  {
+    "id": "EVT-004",
+    "timestamp": "2026-10-14T09:02:30Z",
+    "event_type": "login_failed",
+    "username": "admin",
+    "source_ip": "198.51.100.24",
+    "hostname": "workstation-01",
+    "details": "Invalid password"
+  },
+  {
+    "id": "EVT-005",
+    "timestamp": "2026-10-14T09:05:00Z",
+    "event_type": "privilege_change",
+    "username": "alex",
+    "source_ip": "198.51.100.24",
+    "hostname": "workstation-01",
+    "details": "Account role changed"
+  },
+  {
+    "id": "EVT-006",
+    "timestamp": "2026-10-14T09:08:00Z",
+    "event_type": "file_download",
+    "username": "alex",
+    "source_ip": "198.51.100.24",
+    "hostname": "workstation-01",
+    "filename": "confidential_backup.zip",
+    "details": "File download recorded"
+  },
+  {
+    "id": "EVT-007",
+    "timestamp": "2026-10-14T09:12:00Z",
+    "event_type": "malware_alert",
+    "username": "system",
+    "source_ip": "198.51.100.24",
+    "hostname": "workstation-01",
+    "details": "Simulated malware detection alert"
+  }
+]

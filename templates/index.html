@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cybercrime Time Machine | Forensics Lab</title>
+  <meta name="description" content="Explore fictional security events with a digital forensics timeline and explainable detection rules.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#overview">
+      <span class="brand-icon">CT</span>
+      <span>CYBERTIME<small>FORENSICS LAB</small></span>
+    </a>
+
+    <p class="nav-label">WORKSPACE</p>
+
+    <nav class="navigation">
+      <a class="nav-item active" href="#overview">▦ &nbsp; Overview</a>
+      <a class="nav-item" href="#timeline">◷ &nbsp; Event Timeline</a>
+      <a class="nav-item" href="#findings">⌁ &nbsp; Findings</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <span class="live-dot"></span> LOCAL ANALYSIS MODE
+      <small>Fictional sample evidence</small>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar" id="overview">
+      <div>
+        <p class="eyebrow">SECURITY OPERATIONS / INVESTIGATION</p>
+        <h1>Cybercrime Time Machine</h1>
+        <p class="subtitle">Reconstruct events. Investigate signals. Follow the evidence.</p>
+      </div>
+
+      <button class="button" id="refreshBtn" type="button">
+        ↻ Refresh analysis
+      </button>
+    </header>
+
+    <section class="banner">
+      <div>
+        <div class="banner-heading">
+          <span class="live-dot"></span>
+          INVESTIGATION WORKSPACE
+          <span class="banner-tag">DEMO DATA</span>
+        </div>
+        <p>Chronological reconstruction of recorded security events</p>
+      </div>
+
+      <div class="banner-side">
+        ENGINE
+        <strong>RULE-BASED</strong>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Analysis summary">
+      <article class="metric metric-violet">
+        <span>Total events</span>
+        <strong id="totalEvents">—</strong>
+        <small>Records analyzed</small>
+      </article>
+
+      <article class="metric metric-teal">
+        <span>Findings</span>
+        <strong id="totalFindings">—</strong>
+        <small>Patterns requiring review</small>
+      </article>
+
+      <article class="metric metric-red">
+        <span>Critical findings</span>
+        <strong id="criticalFindings">—</strong>
+        <small>Highest severity</small>
+      </article>
+
+      <article class="metric metric-status">
+        <span>Analysis status</span>
+        <strong id="analysisStatus" class="status-value">Ready</strong>
+        <small>Local sample evidence</small>
+      </article>
+    </section>
+
+    <section class="panel" id="timeline">
+      <header class="panel-header">
+        <div>
+          <p class="eyebrow">01 / RECONSTRUCTION</p>
+          <h2>Event timeline</h2>
+          <p class="section-description">Select an event to inspect its evidence.</p>
+        </div>
+        <span class="counter" id="eventCount">0 EVENTS</span>
+      </header>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>TIME</th>
+              <th>EVENT ID</th>
+              <th>EVENT TYPE</th>
+              <th>SOURCE</th>
+              <th>DETAILS</th>
+            </tr>
+          </thead>
+          <tbody id="timelineBody">
+            <tr>
+              <td colspan="5" class="empty-state">Loading evidence…</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" id="findings">
+      <header class="panel-header">
+        <div>
+          <p class="eyebrow">02 / DETECTION ENGINE</p>
+          <h2>Investigation findings</h2>
+          <p class="section-description">Rule-based signals requiring investigation.</p>
+        </div>
+        <span class="counter">EXPLAINABLE RULES</span>
+      </header>
+
+      <div class="findings-list" id="findingsList">
+        <p class="empty-state">Analyzing events…</p>
+      </div>
+    </section>
+
+    <section class="panel inspector" id="inspector">
+      <header class="panel-header">
+        <div>
+          <p class="eyebrow">03 / EVIDENCE INSPECTOR</p>
+          <h2>Selected event</h2>
+          <p class="section-description">Inspect the complete record of a selected event.</p>
+        </div>
+        <span class="counter">RAW EVIDENCE</span>
+      </header>
+
+      <pre id="eventInspector">Select an event from the timeline to inspect its complete record.</pre>
+    </section>
+
+    <footer>
+      <span>CYBERCRIME TIME MACHINE</span>
+      <span>Educational prototype · Fictional evidence · Not a production incident-response system</span>
+    </footer>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>
